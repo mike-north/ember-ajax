@@ -282,7 +282,6 @@ export default Mixin.create({
     pendingRequestCount = pendingRequestCount + 1;
 
     const jqXHR = ajax(hash.url!, hash);
-
     const promise = new AJAXPromise<RawResponse>((resolve, reject) => {
       jqXHR
         .done((payload, textStatus, jqXHR) => {
